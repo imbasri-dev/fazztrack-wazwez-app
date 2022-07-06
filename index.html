@@ -10,6 +10,7 @@
   </head>
   <body>
     <header>
+      <!-- nav start -->
       <nav id="navbar">
         <div class="nav_logo">
           <img src="/assets/img/logo_wazwez.png" alt="logo" />
@@ -39,8 +40,10 @@
           </div>
         </div>
       </nav>
+      <!-- nav end -->
     </header>
     <main id="container">
+      <!-- todolist bar head start -->
       <div class="todolist_bar">
         <div class="todolist_left">
           <h3>my tasks</h3>
@@ -51,8 +54,21 @@
           <a href="#"> <span class="oval">+</span>Tambah tugas </a>
         </div>
       </div>
+      <!-- todolist bar head end -->
+
+      <!-- todolist sort start -->
+      <div class="todolist_sort">
+        <label for="sorts">Sort By</label>
+        <select name="sorts" id="sorts">
+          <option value="time">By Time</option>
+          <option value="date">By Tanggal</option>
+          <option value="date">Terbaru</option>
+        </select>
+      </div>
+
+      <!-- todolist sort end -->
     </main>
-    <footer></footer>
+
     <!-- link javascript ext -->
     <script src="/assets/js/script.js/"></script>
   </body>
