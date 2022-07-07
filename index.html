@@ -33,10 +33,7 @@
               <img src="./assets/img/avatar.png" alt="avatar" />
             </div>
             <p>Krozeo Jupiter</p>
-            <img
-              src="/assets/img/Iconly-Bold-Iconly-Bold-Arrow - Down 2.png"
-              alt="drop arrow"
-            />
+            <img src="/assets/img/dropdown black.png" alt="drop arrow" />
           </div>
         </div>
       </nav>
@@ -60,8 +57,8 @@
       <div class="todolist_sort">
         <label for="sorts">Sort By</label>
         <select name="sorts" id="sorts">
-          <option value="time">By Time</option>
           <option value="date">By Tanggal</option>
+          <option value="time">By Time</option>
           <option value="date">Terbaru</option>
         </select>
       </div>
@@ -70,44 +67,55 @@
         <!-- content 1 -->
         <div class="task_content_bar">
           <div class="task_content">
-            <input type="radio" name="produk" value="produk" />
+            <input type="checkbox" name="task" value="task" id="checkbox" />
             Produk Design
+            <label for="checkbox"></label>
             <span class="sort_content">Hari Ini</span>
             <p class="text_content">Tugas untuk design team</p>
           </div>
-          <img
-            src="/assets/img/Iconly-Bold-Iconly-Bold-Arrow - Down 2.png"
-            alt="dropdown"
-          />
+          <img src="/assets/img/dropdown black.png" alt="dropdown" />
         </div>
         <!-- content 2-->
         <div class="task_content_bar">
           <div class="task_content">
-            <input type="radio" name="produk" value="produk" />
+            <input type="checkbox" name="task" value="task" id="checkbox2" />
+            <label for="checkbox2"></label>
             <span class="title_content">Development</span>
             <span class="sort_content">15 Juni 2022</span>
             <p></p>
           </div>
-          <img
-            src="/assets/img/Iconly-Bold-Iconly-Bold-Arrow - Down 2.png"
-            alt="dropdown"
-          />
+          <img src="/assets/img/dropdown black.png" alt="dropdown" />
         </div>
 
         <!-- content 3-->
         <div class="task_content_bar">
           <div class="task_content">
-            <input type="radio" name="produk" value="produk" />
+            <input type="checkbox" name="task" value="task" id="checkbox3" />
+            <label for="checkbox3"></label>
             <span class="title_content">Launching Wazwez Website</span>
             <span class="sort_content">20 Juni 2022</span>
             <p></p>
           </div>
-          <img
-            src="/assets/img/Iconly-Bold-Iconly-Bold-Arrow - Down 2.png"
-            alt="dropdown"
-          />
+          <img src="/assets/img/dropdown black.png" alt="dropdown" />
         </div>
       </div>
+      <div class="batas_line"></div>
+      <!-- todolist Clear Start -->
+      <div class="todolist_clear_container">
+        <div class="todolist_clear_content">
+          <img src="/assets/img/dropdown black.png" alt="dropdown_black" />
+          <select>
+            <option disabled selected value="task1">
+              Tugas Terselesaiakan (3 Tugas)
+            </option>
+            <option value="task1">Task 1</option>
+            <option value="task1">Task 2</option>
+            <option value="task1">Task 3</option>
+          </select>
+        </div>
+      </div>
+      <!-- todolist Clear Start -->
+
       <!-- task_container end -->
     </main>
 
