@@ -8,6 +8,7 @@
   box-sizing: border-box;
 }
 
+
 /* navbar wrap start*/
 nav {
   display: flex;
@@ -87,7 +88,7 @@ nav {
 
 /* avatar end */
 /* navbar end */
-
+/* container task main */
 main {
   width: 800px;
   height: 672px;
@@ -104,6 +105,7 @@ main {
   justify-content: space-between;
   align-items: center;
   margin-top: 40px;
+
 }
 
 /* todolist_bar start */
@@ -201,7 +203,7 @@ main {
   background-size: 10px;
   background-repeat: no-repeat;
   background-position-x: 90%;
-  background-position-y: 15px;
+  background-position-y: 16px;
 
 }
 
@@ -333,6 +335,20 @@ main {
   font-size: 18px;
   /* Text Colors/Secondary */
   color: #7A7F83;
+  text-align: center;
 }
 
 /* todolist clear end */
+
+/* footer */
+footer {
+  padding: 15px;
+  text-align: center;
+  margin-top: 200px;
+  color: #7A7F83;
+  font-size: 14px;
+}
+
+footer p>span {
+  color: #ff5f26;
+}
