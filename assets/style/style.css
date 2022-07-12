@@ -325,11 +325,8 @@ main {
   align-items: center;
 }
 
-.todolist_clear_container .todolist_clear_content select {
-  appearance: none;
+.task {
   margin-left: 15px;
-  background: transparent;
-  border: none;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
