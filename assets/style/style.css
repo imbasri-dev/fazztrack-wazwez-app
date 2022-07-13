@@ -227,15 +227,12 @@ main {
   display: flex;
   margin-top: 16px;
   align-items: center;
-  align-content: center;
   justify-content: space-between;
   position: relative;
 }
 
 .task_content_bar .task_content {
   padding: 5px;
-  width: 100%;
-  height: 100%;
   position: relative;
 }
 
