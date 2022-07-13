@@ -1,5 +1,5 @@
 /* font import google poppins regular 400 and bold 700 */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@600&family=Poppins:wght@400;700&display=swap');
 
 * {
   font-family: "Poppins", sans-serif;
@@ -91,7 +91,7 @@ nav {
 /* container task main */
 main {
   width: 800px;
-  height: 672px;
+  height: auto;
   background: #ffffff;
   box-shadow: 0px 16px 90px rgba(19, 7, 52, 0.08);
   border-radius: 12px;
@@ -228,7 +228,6 @@ main {
   margin-top: 16px;
   align-items: center;
   justify-content: space-between;
-  position: relative;
 }
 
 .task_content_bar .task_content {
@@ -260,7 +259,8 @@ main {
 }
 
 
-.task_content_bar .task_content label {
+.task_content_bar .task_content label,
+.subtask_bar .subtask_content .subtask_input label {
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 50%;
@@ -272,7 +272,8 @@ main {
   width: 28px;
 }
 
-.task_content_bar .task_content label::after {
+.task_content_bar .task_content label::after,
+.subtask_bar .subtask_content .subtask_input label::after {
   border: 2px solid #fff;
   border-top: none;
   border-right: none;
@@ -286,22 +287,107 @@ main {
   width: 12px;
 }
 
-.task_content_bar .task_content input[type="checkbox"] {
-  margin-right: 15px;
+.task_content_bar .task_content input[type="checkbox"],
+.subtask_bar .subtask_content .subtask_input input[type="checkbox"] {
+  margin-right: 16px;
   transform: scale(2.2);
   visibility: hidden;
 }
 
-.task_content_bar .task_content input[type="checkbox"]:checked+label {
+.task_content_bar .task_content input[type="checkbox"]:checked+label,
+.subtask_bar .subtask_content .subtask_input input[type="checkbox"]:checked+label {
   background-color: #ff5f26;
   border-color: #ff5f26;
 }
 
-.task_content_bar .task_content input[type="checkbox"]:checked+label::after {
+.task_content_bar .task_content input[type="checkbox"]:checked+label::after,
+.subtask_bar .subtask_content .subtask_input input[type="checkbox"]:checked+label::after {
   opacity: 1;
 }
 
 /* task content end */
+
+/* subtask dropdown start */
+.subtask_bar {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  background: #F5F5F5;
+  border-radius: 8px;
+}
+
+.subtask_bar .subtask_head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subtask_bar .subtask_head h4 {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  /* Text Colors/Primary */
+  color: #293038;
+  margin: 25px 0 25px 16px;
+}
+
+.subtask_bar .subtask_head button {
+  background: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Text Colors/Gray */
+  border: 1px solid #CCCED2;
+  border-radius: 50px;
+  color: #FF5F26;
+  font-family: 'Mulish', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 6px 10px;
+  margin: 16px;
+}
+
+.subtask_bar .subtask_head button img {
+  width: 17px;
+  margin-right: 8px;
+}
+
+.subtask_bar .subtask_content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 16px;
+  margin-bottom: 16px;
+
+}
+
+.subtask_bar .subtask_content .subtask_input {
+  position: relative;
+  padding: 0 8px;
+}
+
+.subtask_bar .subtask_content .subtask_input label {
+  margin-top: -2px;
+  margin-right: 16px;
+}
+
+.subtask_bar .subtask_content img {
+  width: 18px;
+  margin-right: 16px;
+}
+
+
+
+
+/* subtask dropdown end */
+
+
+
+
+
 
 /* batas line / <hr> */
 .batas_line {
@@ -313,7 +399,7 @@ main {
 
 /* todolist clear start */
 .todolist_clear_container {
-  margin-top: 15px;
+  margin: 15px 0;
 }
 
 .todolist_clear_container .todolist_clear_content {
