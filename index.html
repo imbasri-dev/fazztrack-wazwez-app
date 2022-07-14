@@ -60,17 +60,23 @@
     </div>
     <!-- todolist sort end -->
     <div id="task_container">
-      <!-- content 1 -->
+      <!-- content 1 start -->
       <div class="task_content_bar">
         <div class="task_content">
           <input type="checkbox" name="task" value="task" id="checkbox" />
-          Produk Design
           <label for="checkbox"></label>
+          <span class="title_content">Produk Design</span>
           <span class="sort_content">Hari Ini</span>
+          <img src="/assets/img/more-vertical.png" alt="more" class="more">
           <p class="text_content">Tugas untuk design team</p>
         </div>
         <img src="/assets/img/dropdown black.png" alt="dropdown" class="task_dropdown" />
+        <div class="task_content_modal">
+
+        </div>
       </div>
+      <!-- content 1 end -->
+
       <!-- subtask dropdown start -->
       <div class="subtask_bar" id="subtask_bar">
         <div class="subtask_head">
@@ -79,43 +85,54 @@
         </div>
         <!-- subtask  start-->
         <div class="subtask_content" id="subtask_content">
-
-          <div class="subtask_input checked_input">
+          <div class="subtask_input">
             <input type="checkbox" id="subtask1" />
             <label for="subtask1"></label>
-            <span> Design Review </span>
+            <span>Design Review</span>
           </div>
-          <img src="/assets/img/trash-delete.png" alt="Tambah Task" onclick="">
+          <img src="/assets/img/trash-delete.png" alt="Tambah Task" onclick="" class="subtask_content_delete">
         </div>
-
+        <!-- subtask  end-->
+        <!-- subtask  start-->
+        <div class="subtask_content" id="subtask_content">
+          <div class="subtask_input">
+            <input type="checkbox" id="subtask2" />
+            <label for="subtask2"></label>
+            <span>High-Fidelity design</span>
+          </div>
+          <img src="/assets/img/trash-delete.png" alt="Tambah Task" onclick="" class="subtask_content_delete">
+        </div>
         <!-- subtask  end-->
       </div>
       <!-- subtask dropdown end -->
-
-      <!-- content 2-->
+      <!-- content 2 start -->
       <div class="task_content_bar">
         <div class="task_content">
           <input type="checkbox" name="task" value="task" id="checkbox2" />
           <label for="checkbox2"></label>
           <span class="title_content">Development</span>
           <span class="sort_content">15 Juni 2022</span>
-          <p class="text_content"></p>
         </div>
         <img src="/assets/img/dropdown black.png" alt="dropdown" class="task_dropdown" />
       </div>
-
-      <!-- content 3-->
+      <!-- content 2 end -->
+      <!-- content 3 start -->
       <div class="task_content_bar">
         <div class="task_content">
-          <input type="checkbox" name="task" value="task" id="checkbox3" />
+          <input type="checkbox" name="task" value="task" id=checkbox3" />
           <label for="checkbox3"></label>
           <span class="title_content">Launching Wazwez Website</span>
-          <span class="sort_content">20 Juni 2022</span>
-          <p></p>
+          <span class="sort_content">15 Juni 2022</span>
         </div>
         <img src="/assets/img/dropdown black.png" alt="dropdown" class="task_dropdown" />
       </div>
+      <!-- content 3 end -->
+
+
+
+      <!-- todolist sort end -->
     </div>
+
     <div class="batas_line"></div>
     <!-- todolist Clear Start -->
     <div class="todolist_clear_container">

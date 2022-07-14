@@ -226,19 +226,47 @@ main {
 .task_content_bar {
   display: flex;
   margin-top: 16px;
-  align-items: center;
   justify-content: space-between;
+  position: relative;
+  height: auto;
 }
 
 .task_content_bar .task_content {
-  padding: 5px;
   position: relative;
+  align-self: baseline;
+}
+
+.task_content_bar .task_content span {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.task_content_bar .task_content .more {
+  position: relative;
+  top: 7px;
+  width: 24px;
+  height: 24px;
+}
+
+.task_content_bar .task_dropdown {
+  align-self: flex-start;
+}
+
+.task_content_bar .task_content .title_content {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  /* identical to box height, or 18px */
+  /* Text Colors/Primary */
+  color: #293038;
+  margin-left: 10px;
 }
 
 .task_content_bar .task_content .sort_content {
   padding: 8px 12px;
-  margin-bottom: 8px;
   margin-left: 16px;
+  margin-right: 7px;
   /* Primary/100 */
   background: #FFEBD3;
   border-radius: 50px;
@@ -248,12 +276,11 @@ main {
 }
 
 .task_content_bar .task_content .text_content {
-  margin-left: 32px;
+  margin-left: 44px;
   margin-top: 8px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 100%;
   /* Text Colors/Secondary */
   color: #7A7F83;
 }
@@ -266,8 +293,8 @@ main {
   border-radius: 50%;
   cursor: pointer;
   height: 28px;
-  left: 0;
   position: absolute;
+  left: 0;
   top: 0;
   width: 28px;
 }
@@ -298,7 +325,6 @@ main {
 .subtask_bar .subtask_content .subtask_input input[type="checkbox"]:checked+label {
   background-color: #ff5f26;
   border-color: #ff5f26;
-  text-decoration-line: line-through;
 }
 
 /* line through khusus subtask ketika checklist maka akan tercoret dan saya berikan warna khusus*/
@@ -310,6 +336,12 @@ main {
 .task_content_bar .task_content input[type="checkbox"]:checked+label::after,
 .subtask_bar .subtask_content .subtask_input input[type="checkbox"]:checked+label::after {
   opacity: 1;
+}
+
+
+/* modal start */
+.task_content_modal {
+  position: absolute;
 }
 
 /* task content end */
@@ -382,7 +414,15 @@ main {
 
 }
 
-.subtask_bar .subtask_content img {
+.subtask_bar .subtask_content .subtask_input>span {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  /* Text Colors/Primary */
+  color: #293038;
+}
+
+.subtask_bar .subtask_content .subtask_content_delete {
   width: 18px;
   margin-right: 16px;
 }
