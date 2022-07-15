@@ -251,6 +251,7 @@ main {
 
 .task_content_bar .task_dropdown {
   align-self: flex-start;
+  transform: rotate(0deg);
 }
 
 .task_content_bar .task_content .title_content {
@@ -277,10 +278,10 @@ main {
 
 .task_content_bar .task_content .text_content {
   margin-left: 44px;
-  margin-top: 8px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
+  margin-top: 8px;
   /* Text Colors/Secondary */
   color: #7A7F83;
 }
@@ -340,8 +341,42 @@ main {
 
 
 /* modal start */
-.task_content_modal {
+.task_content_bar .task_content .task_content_modal .modal_content {
+  flex-direction: column;
+  justify-content: center;
+  width: 189px;
+  height: 108px;
+  align-items: flex-start;
+  /* Text Colors/White */
+  background: #FFFFFF;
+  /* Text Colors/Gray */
+  border: 1px solid #CCCED2;
+  border-radius: 8px;
   position: absolute;
+  top: 45px;
+  left: 270px;
+  display: none;
+  z-index: 2;
+}
+
+.task_content_bar .task_content .task_content_modal .modal_content .modal_task {
+  display: flex;
+  justify-content: flex-start;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 10px 22px;
+  /* identical to box height */
+  /* Text Colors/Primary */
+  color: #293038;
+  margin: 5px auto;
+}
+
+.task_content_bar .task_content .task_content_modal .modal_content .modal_task img {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
 }
 
 /* task content end */
@@ -399,7 +434,7 @@ main {
   justify-content: space-between;
   align-items: center;
   margin-left: 16px;
-  margin-bottom: 16px;
+  padding: 8px 0;
 
 }
 
@@ -462,3 +497,34 @@ main {
 }
 
 /* todolist clear end */
+
+/* element buat javascript */
+.show {
+  display: none;
+}
+
+.rotate {
+  align-self: flex-start;
+  transform: rotate(180deg);
+  opacity: 0.5;
+}
+
+.modal {
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  width: 189px;
+  height: 108px;
+  align-items: flex-start;
+  /* Text Colors/White */
+  background: #FFFFFF;
+  /* Text Colors/Gray */
+  border: 1px solid #CCCED2;
+  border-radius: 8px;
+  position: absolute;
+  top: 45px;
+  left: 270px;
+  z-index: 2;
+}
+
+/* element buat javascript */
