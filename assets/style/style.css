@@ -341,11 +341,11 @@ main {
 
 
 /* modal start */
-.task_content_bar .task_content .task_content_modal .modal_content {
+.modal_content {
   flex-direction: column;
   justify-content: center;
   width: 189px;
-  height: 108px;
+  height: auto;
   align-items: flex-start;
   /* Text Colors/White */
   background: #FFFFFF;
@@ -355,11 +355,12 @@ main {
   position: absolute;
   top: 45px;
   left: 270px;
-  display: none;
   z-index: 2;
+  display: none;
 }
 
-.task_content_bar .task_content .task_content_modal .modal_content .modal_task {
+
+.modal_content .modal_task {
   display: flex;
   justify-content: flex-start;
   font-style: normal;
@@ -373,7 +374,7 @@ main {
   margin: 5px auto;
 }
 
-.task_content_bar .task_content .task_content_modal .modal_content .modal_task img {
+.modal_content .modal_task img {
   width: 20px;
   height: 20px;
   margin-right: 12px;
@@ -507,24 +508,6 @@ main {
   align-self: flex-start;
   transform: rotate(180deg);
   opacity: 0.5;
-}
-
-.modal {
-  display: block;
-  flex-direction: column;
-  justify-content: center;
-  width: 189px;
-  height: 108px;
-  align-items: flex-start;
-  /* Text Colors/White */
-  background: #FFFFFF;
-  /* Text Colors/Gray */
-  border: 1px solid #CCCED2;
-  border-radius: 8px;
-  position: absolute;
-  top: 45px;
-  left: 270px;
-  z-index: 2;
 }
 
 /* element buat javascript */

@@ -32,5 +32,11 @@ for (let i = 0; i < deleteSubTask.length; i++) {
 // modal more
 let modalButton = document.querySelector(".more");
 let modalBar = document.querySelector(".modal_content");
-
-modalButton.addEventListener("click", function () {});
+modalButton.addEventListener("click", function () {
+  console.log("klik");
+  if (modalBar.style.display === "block") {
+    modalBar.style.display = "none";
+  } else {
+    modalBar.style.display = "block";
+  }
+});
