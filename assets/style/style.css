@@ -505,12 +505,26 @@ main {
 }
 
 /* element buat javascript */
+/* iPads/Tablet (portrait and landscape) ----------- */
+@media only screen and (min-width:768px) and (max-width:1024px) {
+  main {
+    margin: 0 auto;
+    width: 95vw;
+  }
 
+  /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+  nav {
+    width: 95vw;
+  }
+
+  .batas_line {
+    width: 100%;
+  }
+}
 
 @media only screen and (max-width: 425px) {
   nav {
     width: 400px;
-    margin: 30px 10px;
   }
 
   .nav_logo>img {
@@ -623,4 +637,8 @@ main {
   .todolist_clear_container .todolist_clear_content p {
     font-size: 14px;
   }
+
+
+
+
 }
