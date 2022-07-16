@@ -1,4 +1,7 @@
 console.log("hello world");
+// tambah tugas start
+let buttonTambahTugas = document.querySelector("#tambah_tugas");
+// tambah tugas end
 // subtask dropdown start
 let subTaskBar = document.querySelector("#subTaskBar");
 let taskButton = document.querySelector(".task_dropdown");
@@ -20,9 +23,11 @@ taskButton.addEventListener("click", function () {
 // subtask content start
 let deleteSubTask = document.querySelectorAll(".subtask_content_delete");
 let contentSubTask = document.querySelectorAll("#subtask_content");
+
 for (let i = 0; i < deleteSubTask.length; i++) {
   deleteSubTask[i].addEventListener("click", function () {
-    for (let task = 0; task < contentSubTask.length; task++) {
+    let konfirm = confirm("Apakah dihapus ?");
+    if (konfirm == true) {
       contentSubTask[i].remove(".subtask_content");
     }
   });
@@ -33,7 +38,6 @@ for (let i = 0; i < deleteSubTask.length; i++) {
 let modalButton = document.querySelector(".more");
 let modalBar = document.querySelector(".modal_content");
 modalButton.addEventListener("click", function () {
-  console.log("klik");
   if (modalBar.style.display === "block") {
     modalBar.style.display = "none";
   } else {
