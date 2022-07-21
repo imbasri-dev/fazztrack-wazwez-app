@@ -44,3 +44,11 @@ modalButton.addEventListener("click", function () {
     modalBar.style.display = "block";
   }
 });
+
+// tambah task
+
+let tambahTask = document.querySelector(".todolist_right");
+let showTask = document.querySelector(".task_show");
+tambahTask.addEventListener("click", function () {
+  showTask.classList.toggle("task_show");
+});

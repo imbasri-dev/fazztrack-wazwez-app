@@ -231,9 +231,64 @@ main {
   height: auto;
 }
 
+.task_tambah_bar {
+  background: #F5F5F5;
+  margin: 8px -40px 0px -40px;
+  padding: 0 40px;
+}
+
+.task_show {
+  display: none;
+}
+
+/* form tambah start */
+.task_tambah_data .form_tambah {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: -20px;
+  border: none;
+  align-items: center;
+}
+
+.task_tambah_data .form_tambah img {
+  width: 18px;
+  margin-right: 8px;
+}
+
+.task_tambah_data .form_tambah input.namaTugas {
+  margin-left: -10px;
+  margin-top: -5px;
+}
+
+.task_tambah_data .form_tambah input {
+  background: #F5F5F5;
+  border: none;
+  align-items: center;
+  padding: 2px 5px;
+  width: 400px;
+  font-size: 16px;
+
+}
+
+.task_tambah_data .form_tambah .taskInput {
+  display: flex;
+  margin-top: 12px;
+}
+
+
+
+/* form tambah end */
+.input_tambah {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
 .task_content_bar .task_content {
   position: relative;
-  align-self: baseline;
+  align-self: center;
+  margin: 5px 0;
 }
 
 .task_content_bar .task_content span {
@@ -536,6 +591,7 @@ main {
   }
 }
 
+/* smartphone start */
 @media only screen and (max-width: 425px) {
   nav {
     width: 400px;
@@ -652,7 +708,17 @@ main {
     font-size: 14px;
   }
 
+  /* tambah task */
+  .task_tambah_data .form_tambah input {
+    width: auto;
+  }
 
+  .task_tambah_bar {
+    margin: 8px -10px 0px -40px;
+  }
 
+  .task_tambah_data .form_tambah input.namaTugas {
+    margin-left: -15px;
+  }
 
 }
