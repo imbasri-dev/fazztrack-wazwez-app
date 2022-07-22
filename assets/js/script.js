@@ -34,7 +34,7 @@ for (let i = 0; i < deleteSubTask.length; i++) {
 }
 // subtask content end
 
-// modal more
+// modal more start
 let modalButton = document.querySelector(".more");
 let modalBar = document.querySelector(".modal_content");
 modalButton.addEventListener("click", function () {
@@ -44,11 +44,76 @@ modalButton.addEventListener("click", function () {
     modalBar.style.display = "block";
   }
 });
+// modal more end
 
-// tambah task
-
+// tambah task start
 let tambahTask = document.querySelector(".todolist_right");
 let showTask = document.querySelector(".task_show");
 tambahTask.addEventListener("click", function () {
   showTask.classList.toggle("task_show");
 });
+// tambah task start
+
+// form input
+// check ambil nilai input
+let input = document.getElementById("form-tambah");
+input.addEventListener("keypress", function (event) {
+  const task = {
+    name: document.getElementById("inputName").value,
+    desc: document.getElementById("inputDesc").value,
+    date: document.getElementById("inputDate").value,
+  };
+  if (event.key === "Enter") {
+    event.preventDefault();
+    if (task.name === "") {
+      alert("Nama tugas tidak boleh kosong !");
+    } else {
+      console.log(task.name);
+      console.log(task.desc);
+      console.log(task.date);
+      handleEnter();
+      showTask.classList.toggle("task_show");
+      document.getElementById("inputName").value = "";
+      document.getElementById("inputDesc").value = "";
+      document.getElementById("inputDate").value = "";
+      alert("Data berhasil ditambahkan");
+    }
+  }
+});
+
+// newtask
+function handleEnter() {
+  const task = {
+    name: document.getElementById("inputName").value,
+    desc: document.getElementById("inputDesc").value,
+    date: document.getElementById("inputDate").value,
+  };
+  let newTask = document.getElementById("newTask");
+  newTask.innerHTML += `
+      <div class=" task_content_bar" id="newTaskBar ">
+      <div class="task_content" id="newTask">
+                <input type="checkbox" name="task" value="task" id="${task.name}" />
+                <label for="${task.name}"></label>
+                <span class="title_content">${task.name}</span>
+                <span class="sort_content">${task.date}</span>
+                <img src="/assets/img/more-vertical.png" alt="more" class="more">
+                <!-- task modal start -->
+                <div class="task_content_modal" id="modalTask">
+                  <div class="modal_content">
+                    <div class="modal_task edit">
+                      <img src="/assets/img/Iconly-Bold-Edit.png" alt="rename">
+                      <p>Rename Task</p>
+                    </div>
+                    <div class="modal_task delete">
+                      <img src="/assets/img/Iconly-Bold-Delete.png" alt="delete">
+                      <p>Delete Task</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- task modal end -->
+                <p class="text_content">${task.desc}</p>
+
+              </div>
+              </div>
+              `;
+}
