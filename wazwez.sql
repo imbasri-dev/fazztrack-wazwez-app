@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 25, 2022 at 03:43 PM
+-- Generation Time: Jul 25, 2022 at 04:45 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.0.19
 
@@ -41,7 +41,8 @@ CREATE TABLE `subtasks` (
 INSERT INTO `subtasks` (`subtask_id`, `task_id`, `name`, `status`) VALUES
 (3, 2, 'HTML', 'DONE'),
 (4, 2, 'CSS', 'DONE'),
-(5, 8, 'Upload script to github', 'ONGOING');
+(5, 8, 'Upload script to github', 'ONGOING'),
+(6, 9, 'Upload Hosting', 'DONE');
 
 -- --------------------------------------------------------
 
@@ -67,7 +68,8 @@ INSERT INTO `tasks` (`task_id`, `user_id`, `name`, `description`, `date`, `statu
 (2, 2, 'Development', 'development made in fast time', '2022-07-25', 'DONE'),
 (3, 2, 'Launching Wazwez Website\r\n', 'the website has been published on the server', '2022-07-25', 'DONE'),
 (7, 1, 'Checking Bug', 'minimize bugs', '2022-07-24', 'ONGOING'),
-(8, 3, 'Deploy to Server', NULL, '2022-07-24', 'DONE');
+(8, 3, 'Deploy to Server', NULL, '2022-07-24', 'DONE'),
+(9, 3, 'Testing WEB', NULL, '2022-07-25', 'ONGOING');
 
 -- --------------------------------------------------------
 
@@ -122,13 +124,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `subtasks`
 --
 ALTER TABLE `subtasks`
-  MODIFY `subtask_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `subtask_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tasks`
 --
 ALTER TABLE `tasks`
-  MODIFY `task_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `task_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `users`
