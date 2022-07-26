@@ -67,7 +67,7 @@
           <input type="checkbox" name="task" value="task" id="checkbox2" />
           <label for="checkbox2"></label>
           <div class="input_tambah">
-            <form id="formTambah" class="form_tambah">
+            <div id="formTambah" class="form_tambah">
               <input type="text" placeholder="Masukan nama tugas" class="namaTugas" id="inputName" ">
               <div class=" taskInput">
               <img src="/assets/img/menu-task.png" alt="description">
@@ -76,96 +76,77 @@
               <div class=" taskInput"><img src="/assets/img/Iconly-Light-Outline-Calendar.svg" alt="date">
               <input type="text" placeholder="Tanggal & Waktu" id="inputDate"">
               </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>
       <!-- tambah data form start -->
-
-      <!-- content 1 start -->
-      <div class=" task_content_bar" id="newTaskBar ">
-              <div class="task_content" id="newTask">
-                <input type="checkbox" name="task" value="task" id="checkbox" />
-                <label for="checkbox"></label>
-                <span class="title_content">Produk Design</span>
-                <span class="sort_content">Hari Ini</span>
-                <img src="/assets/img/more-vertical.png" alt="more" class="more">
-                <!-- task modal start -->
-                <div class="task_content_modal" id="modalTask">
-                  <div class="modal_content">
-                    <div class="modal_task edit">
-                      <img src="/assets/img/Iconly-Bold-Edit.png" alt="rename">
-                      <p>Rename Task</p>
-                    </div>
-                    <div class="modal_task delete">
-                      <img src="/assets/img/Iconly-Bold-Delete.png" alt="delete">
-                      <p>Delete Task</p>
+            <div id=" contentTask">
+              <!-- content 1 start -->
+              <div class="task_content_bar" id="newTaskBar ">
+                <div class="task_content" id="newTask">
+                  <input type="checkbox" name="task" value="task" id="checkbox" />
+                  <label for="checkbox"></label>
+                  <span class="title_content">Produk Design</span>
+                  <span class="sort_content">Hari Ini</span>
+                  <img src="/assets/img/more-vertical.png" alt="more" class="more">
+                  <!-- task modal start -->
+                  <div class="task_content_modal" id="modalTask">
+                    <div class="modal_content">
+                      <div class="modal_task edit">
+                        <img src="/assets/img/Iconly-Bold-Edit.png" alt="rename">
+                        <p>Rename Task</p>
+                      </div>
+                      <div class="modal_task delete">
+                        <img src="/assets/img/Iconly-Bold-Delete.png" alt="delete">
+                        <p>Delete Task</p>
+                      </div>
                     </div>
                   </div>
+                  <!-- task modal end -->
+
+                  <p class="text_content">Tugas untuk design team</p>
                 </div>
-                <!-- task modal end -->
-
-                <p class="text_content">Tugas untuk design team</p>
+                <img src="/assets/img/dropdown black.png" alt="dropdown" class="task_dropdown" id="dropTaskContent" />
               </div>
-              <img src="/assets/img/dropdown black.png" alt="dropdown" class="task_dropdown" id="dropTaskContent" />
-          </div>
-          <!-- content 1 end -->
-          <!-- subtask dropdown start -->
-          <div class="subtask_bar show" id="subTaskBar">
-            <div class="subtask_head">
-              <h4>Subtask</h4>
-              <button type="submit"><img src="/assets/img/Iconly-Curved-Plus.svg">Tambah </button>
-            </div>
-            <!-- subtask  start-->
-            <div class="subtask_content" id="subtask_content">
-              <div class="subtask_input">
-                <input type="checkbox" id="subtask1" />
-                <label for="subtask1"></label>
-                <span>Design Review</span>
+              <!-- content 1 end -->
+              <!-- subtask dropdown start -->
+              <div class="subtask_bar show" id="subTaskBar">
+                <div class="subtask_head">
+                  <h4>Subtask</h4>
+                  <button type="submit"><img src="/assets/img/Iconly-Curved-Plus.svg">Tambah</button>
+                </div>
+                <!-- subtask  start-->
+                <div class="subtask_content" id="subtask_content">
+                  <div class="subtask_input">
+                    <input type="checkbox" id="subtask1" />
+                    <label for="subtask1"></label>
+                    <span>Design Review</span>
+                  </div>
+                  <img src="/assets/img/trash-delete.png" alt="Tambah Task" class="subtask_content_delete">
+                </div>
+                <!-- subtask  end-->
               </div>
-              <img src="/assets/img/trash-delete.png" alt="Tambah Task" class="subtask_content_delete">
-            </div>
-            <!-- subtask  end-->
-            <!-- subtask  start-->
-            <div class="subtask_content" id="subtask_content">
-              <div class="subtask_input">
-                <input type="checkbox" id="subtask2" />
-                <label for="subtask2"></label>
-                <span>Low-Fidelity design</span>
+              <!-- subtask dropdown end -->
+              <!-- move hasil input  start-->
+              <div id="inputBaru">
               </div>
-              <img src="/assets/img/trash-delete.png" alt="Tambah Task" class="subtask_content_delete">
-            </div>
-            <!-- subtask  end-->
-            <!-- subtask  start-->
-            <div class="subtask_content" id="subtask_content">
-              <div class="subtask_input">
-                <input type="checkbox" id="subtask3" />
-                <label for="subtask3"></label>
-                <span>High-Fidelity design</span>
+              <!-- move hasil input  end-->
+
+              <!-- subtask dropdown end -->
+              <div class="batas_line"></div>
+              <!-- todolist Clear Start -->
+              <div class="todolist_clear_container">
+                <div class="todolist_clear_content">
+                  <img src="/assets/img/dropdown black.png" alt="dropdown_black" />
+                  <div class="task">
+                    <p>Tugas Terselesaiakan (3 Tugas)</p>
+                  </div>
+                </div>
               </div>
-              <img src="/assets/img/trash-delete.png" alt="Tambah Task" class="subtask_content_delete">
-            </div>
-            <!-- subtask  end-->
+              <!-- todolist Clear Start -->
 
-          </div>
-          <!-- subtask dropdown end -->
-
-          <!-- todolist sort end -->
-        </div>
-
-        <div class="batas_line"></div>
-        <!-- todolist Clear Start -->
-        <div class="todolist_clear_container">
-          <div class="todolist_clear_content">
-            <img src="/assets/img/dropdown black.png" alt="dropdown_black" />
-            <div class="task">
-              <p>Tugas Terselesaiakan (3 Tugas)</p>
-            </div>
-          </div>
-        </div>
-        <!-- todolist Clear Start -->
-
-        <!-- task_container end -->
+              <!-- task_container end -->
   </main>
 
   <!-- link javascript ext -->
