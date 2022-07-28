@@ -1,8 +1,5 @@
 // testing connect javascript console
 console.log("hello world");
-// tambah tugas start
-let buttonTambahTugas = document.querySelector("#tambah_tugas");
-// tambah tugas end
 
 // tambah task start
 let tambahTask = document.querySelector(".todolist_right");
@@ -10,10 +7,10 @@ let showTask = document.querySelector(".task_show");
 tambahTask.addEventListener("click", function () {
   showTask.classList.toggle("task_show");
 });
-// tambah task start
+// tambah task end
 
 // form input
-// check ambil nilai input
+// check ambil nilai input start
 let input = document.getElementById("form-tambah");
 input.addEventListener("keypress", function (event) {
   const task = {
@@ -38,8 +35,9 @@ input.addEventListener("keypress", function (event) {
     }
   }
 });
+// check ambil nilai input end
 
-// newtask
+// newtask start
 function handleEnter() {
   const task = {
     name: document.getElementById("inputName").value,
@@ -121,7 +119,6 @@ function handleEnter() {
   // modal more start
   let modalButton = document.querySelectorAll(".more");
   let modalBar = document.querySelectorAll(".modal_content");
-  let windowsClick = document.getElementsByTagName("body")[0];
   for (let modalNode = 0; modalNode < modalButton.length; modalNode++) {
     modalButton[modalNode].addEventListener("click", function () {
       if (modalBar[modalNode].style.display === "block") {
@@ -146,3 +143,4 @@ function handleEnter() {
   }
   // subtask content end
 }
+// newtask  end
