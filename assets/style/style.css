@@ -449,6 +449,27 @@ main {
   transition: .3s;
 }
 
+/* addsubtask start */
+.subtask_add {
+  width: 100%;
+  display: block;
+}
+
+.show_subtask {
+  display: none;
+}
+
+#subtask_addinput {
+  border: none;
+  padding: 3px 30px;
+  font-size: 16px;
+  width: 100%;
+  background: #F5F5F5;
+}
+
+
+/* addsubtask end */
+
 .subtask_bar .subtask_head {
   display: flex;
   justify-content: space-between;

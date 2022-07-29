@@ -26,7 +26,7 @@ input.addEventListener("keypress", function (event) {
       console.log(task.name);
       console.log(task.desc);
       console.log(task.date);
-      handleEnter();
+      handleEnterAddTask();
       showTask.classList.toggle("task_show");
       document.getElementById("inputName").value = "";
       document.getElementById("inputDesc").value = "";
@@ -38,7 +38,7 @@ input.addEventListener("keypress", function (event) {
 // check ambil nilai input end
 
 // newtask start
-function handleEnter() {
+function handleEnterAddTask() {
   const task = {
     name: document.getElementById("inputName").value,
     desc: document.getElementById("inputDesc").value,
@@ -94,43 +94,89 @@ function handleEnter() {
               <!-- move hasil input  start-->
               <div id="inputBaru">
               </div>`;
+}
+// newtask  end
 
-  // subtask dropdown start
-  let subTaskBar = document.querySelectorAll("#subTaskBar");
-  let taskButton = document.querySelectorAll(".task_dropdown");
-  // jika ada class task_drop maka akan
-  for (let index = 0; index < taskButton.length; index++) {
-    taskButton[index].addEventListener("click", function () {
-      if (taskButton[index].classList.contains("task_dropdown")) {
-        // active , jika salah
-        taskButton[index].classList.add("rotate");
-        taskButton[index].classList.remove("task_dropdown");
-      } // active
-      else {
-        taskButton[index].classList.remove("rotate");
-        taskButton[index].classList.add("task_dropdown");
-      }
-      // ini saya loop berdasarkan dari jumlah taskdropdown dikarenakan 1 paket
-      subTaskBar[index].classList.toggle("show");
-    });
-  }
-  // subtask dropdown end
+// subtask dropdown start
+let subTaskBar = document.querySelectorAll("#subTaskBar");
+let taskButton = document.querySelectorAll(".task_dropdown");
+// jika ada class task_drop maka akan
+for (
+  let taskButtonNode = 0;
+  taskButtonNode < taskButton.length;
+  taskButtonNode++
+) {
+  taskButton[taskButtonNode].addEventListener("click", function () {
+    if (taskButton[taskButtonNode].classList.contains("task_dropdown")) {
+      // active , jika salah
+      taskButton[taskButtonNode].classList.add("rotate");
+      taskButton[taskButtonNode].classList.remove("task_dropdown");
+    } // active
+    else {
+      taskButton[taskButtonNode].classList.remove("rotate");
+      taskButton[taskButtonNode].classList.add("task_dropdown");
+    }
+    // ini saya loop berdasarkan dari jumlah taskdropdown dikarenakan 1 paket
+    subTaskBar[taskButtonNode].classList.toggle("show");
+  });
+}
+// subtask dropdown end
 
-  // modal more start
-  let modalButton = document.querySelectorAll(".more");
-  let modalBar = document.querySelectorAll(".modal_content");
-  for (let modalNode = 0; modalNode < modalButton.length; modalNode++) {
-    modalButton[modalNode].addEventListener("click", function () {
-      if (modalBar[modalNode].style.display === "block") {
-        modalBar[modalNode].style.display = "none";
+// modal more start
+let modalButton = document.querySelectorAll(".more");
+let modalBar = document.querySelectorAll(".modal_content");
+for (let modalNode = 0; modalNode < modalButton.length; modalNode++) {
+  modalButton[modalNode].addEventListener("click", function () {
+    if (modalBar[modalNode].style.display === "block") {
+      modalBar[modalNode].style.display = "none";
+    } else {
+      modalBar[modalNode].style.display = "block";
+    }
+  });
+}
+// modal more end
+
+// subtask content start
+deletedSubtask();
+// subtask content end
+
+// addsubtask show/close start
+for (
+  let buttonAddNode = 0;
+  buttonAddNode < taskButton.length;
+  buttonAddNode++
+) {
+  let buttonAddSubtask = document.getElementsByClassName("subtask_addbutton");
+  let showInputSubtask = document.querySelectorAll(".subtask_add");
+  buttonAddSubtask[buttonAddNode].addEventListener("click", function () {
+    showInputSubtask[buttonAddNode].classList.toggle("show_subtask");
+  });
+}
+// addsubtask show/close end
+
+// func addsubtask start
+for (
+  let inputSubtaskNode = 0;
+  inputSubtaskNode < taskButton.length;
+  inputSubtaskNode++
+) {
+  let inputSubtask = document.querySelectorAll("#subtask_addinput");
+
+  inputSubtask[inputSubtaskNode].addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      if (inputSubtask[inputSubtaskNode] === "") {
+        alert("Nama tugas tidak boleh kosong !");
       } else {
-        modalBar[modalNode].style.display = "block";
+        console.log(inputSubtask[inputSubtaskNode].value);
+        handleEnterSubTask();
+        // alert("Data berhasil ditambahkan");
+        document.getElementById("subtask_addinput").value = "";
       }
-    });
-  }
-  // modal more end
-
-  // subtask content start
+    }
+  });
+}
+function deletedSubtask() {
   let deleteSubTask = document.querySelectorAll(".subtask_content_delete");
   let contentSubTask = document.querySelectorAll("#subtask_content");
   for (let i = 0; i < deleteSubTask.length; i++) {
@@ -141,6 +187,22 @@ function handleEnter() {
       }
     });
   }
-  // subtask content end
 }
-// newtask  end
+
+// func addsubtask end
+function handleEnterSubTask() {
+  let inputSubtask = document.getElementById("subtask_addinput").value;
+  let inputBaru = document.getElementById("subtaskBaru");
+
+  inputBaru.innerHTML += `
+                <div class="subtask_content" id="subtask_content">
+                  <div class="subtask_input">
+                    <input type="checkbox" id="${inputSubtask}" />
+                    <label for="${inputSubtask}"></label>
+                    <span>${inputSubtask}</span>
+                    </div>
+                    <img src="/assets/img/trash-delete.png" alt="Tambah Task" class="subtask_content_delete">
+                </div>`;
+
+  deletedSubtask();
+}

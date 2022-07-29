@@ -114,18 +114,28 @@
               <div class="subtask_bar show" id="subTaskBar">
                 <div class="subtask_head">
                   <h4>Subtask</h4>
-                  <button type="submit"><img src="/assets/img/Iconly-Curved-Plus.svg">Tambah</button>
+                  <button class="subtask_addbutton"><img src="/assets/img/Iconly-Curved-Plus.svg">Tambah</button>
                 </div>
+                <!-- addsubtask start -->
+                <div class="subtask_add show_subtask" id="subtask_addbar">
+                  <input type="text" name="subtask" id="subtask_addinput" placeholder="Masukkan nama subtask">
+                </div>
+                <!-- addsubtask end -->
+
                 <!-- subtask  start-->
-                <div class="subtask_content" id="subtask_content">
+                <!-- <div class="subtask_content" id="subtask_content">
                   <div class="subtask_input">
                     <input type="checkbox" id="subtask1" />
                     <label for="subtask1"></label>
                     <span>Design Review</span>
                   </div>
                   <img src="/assets/img/trash-delete.png" alt="Tambah Task" class="subtask_content_delete">
-                </div>
+                </div> -->
                 <!-- subtask  end-->
+
+
+                <div id="subtaskBaru">
+                </div>
               </div>
               <!-- subtask dropdown end -->
               <!-- move hasil input  start-->
