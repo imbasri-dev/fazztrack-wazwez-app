@@ -64,8 +64,8 @@
       <!-- tambah data form start -->
       <div class="task_content_bar task_tambah_bar task_show">
         <div class="task_content task_tambah_data" id="form-tambah">
-          <input type="checkbox" name="task" value="task" id="checkbox2" />
-          <label for="checkbox2"></label>
+          <input type="checkbox" name="task" value="task" id="inputName" />
+          <label for="inputName"></label>
           <div class="input_tambah">
             <div id="formTambah" class="form_tambah">
               <input type="text" placeholder="Masukan nama tugas" class="namaTugas" id="inputName" ">
@@ -91,7 +91,7 @@
                   <span class="sort_content">Hari Ini</span>
                   <img src="/assets/img/more-vertical.png" alt="more" class="more">
                   <!-- task modal start -->
-                  <div class="task_content_modal" id="modalTask">
+                  <div class=" task_content_modal" id="modalTask">
                     <div class="modal_content">
                       <div class="modal_task edit">
                         <img src="/assets/img/Iconly-Bold-Edit.png" alt="rename">
@@ -110,6 +110,7 @@
                 <img src="/assets/img/dropdown black.png" alt="dropdown" class="task_dropdown" id="dropTaskContent" />
               </div>
               <!-- content 1 end -->
+
               <!-- subtask dropdown start -->
               <div class="subtask_bar show" id="subTaskBar">
                 <div class="subtask_head">
@@ -132,31 +133,30 @@
                   <img src="/assets/img/trash-delete.png" alt="Tambah Task" class="subtask_content_delete">
                 </div> -->
                 <!-- subtask  end-->
+                <div id="subtaskBaru"></div>
 
-
-                <div id="subtaskBaru">
-                </div>
+                <!-- subtask dropdown end -->
               </div>
-              <!-- subtask dropdown end -->
               <!-- move hasil input  start-->
-              <div id="inputBaru">
-              </div>
+              <div id="inputBaru"></div>
               <!-- move hasil input  end-->
+            </div>
 
-              <!-- subtask dropdown end -->
-              <div class="batas_line"></div>
-              <!-- todolist Clear Start -->
-              <div class="todolist_clear_container">
-                <div class="todolist_clear_content">
-                  <img src="/assets/img/dropdown black.png" alt="dropdown_black" />
-                  <div class="task">
-                    <p>Tugas Terselesaiakan (3 Tugas)</p>
-                  </div>
+
+            <!-- subtask dropdown end -->
+            <div class="batas_line"></div>
+            <!-- todolist Clear Start -->
+            <div class="todolist_clear_container">
+              <div class="todolist_clear_content">
+                <img src="/assets/img/dropdown black.png" alt="dropdown_black" />
+                <div class="task">
+                  <p>Tugas Terselesaiakan (3 Tugas)</p>
                 </div>
               </div>
-              <!-- todolist Clear Start -->
+            </div>
+            <!-- todolist Clear Start -->
 
-              <!-- task_container end -->
+            <!-- task_container end -->
   </main>
 
   <!-- link javascript ext -->

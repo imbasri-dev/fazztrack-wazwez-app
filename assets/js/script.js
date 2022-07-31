@@ -72,28 +72,7 @@ function handleEnterAddTask() {
                 </div>
                 <img src="/assets/img/dropdown black.png" alt="dropdown" class="task_dropdown" id="dropTaskContent" />
               </div>
-              <!-- content 1 end -->
-              <!-- subtask dropdown start -->
-              <div class="subtask_bar show" id="subTaskBar">
-                <div class="subtask_head">
-                  <h4>Subtask</h4>
-                  <button type="submit"><img src="/assets/img/Iconly-Curved-Plus.svg">Tambah</button>
-                </div>
-                <!-- subtask  start-->
-                <div class="subtask_content" id="subtask_content">
-                  <div class="subtask_input">
-                    <input type="checkbox" id="subtask1" />
-                    <label for="subtask1"></label>
-                    <span>Design Review</span>
-                  </div>
-                  <img src="/assets/img/trash-delete.png" alt="Tambah Task" class="subtask_content_delete">
-                </div>
-                <!-- subtask  end-->
-              </div>
-              <!-- subtask dropdown end -->
-              <!-- move hasil input  start-->
-              <div id="inputBaru">
-              </div>`;
+             `;
 }
 // newtask  end
 
@@ -161,11 +140,10 @@ for (
   inputSubtaskNode++
 ) {
   let inputSubtask = document.querySelectorAll("#subtask_addinput");
-
   inputSubtask[inputSubtaskNode].addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
       event.preventDefault();
-      if (inputSubtask[inputSubtaskNode] === "") {
+      if (inputSubtask[inputSubtaskNode].value === "") {
         alert("Nama tugas tidak boleh kosong !");
       } else {
         console.log(inputSubtask[inputSubtaskNode].value);
@@ -195,6 +173,7 @@ function handleEnterSubTask() {
   let inputBaru = document.getElementById("subtaskBaru");
 
   inputBaru.innerHTML += `
+
                 <div class="subtask_content" id="subtask_content">
                   <div class="subtask_input">
                     <input type="checkbox" id="${inputSubtask}" />
@@ -203,6 +182,5 @@ function handleEnterSubTask() {
                     </div>
                     <img src="/assets/img/trash-delete.png" alt="Tambah Task" class="subtask_content_delete">
                 </div>`;
-
   deletedSubtask();
 }
